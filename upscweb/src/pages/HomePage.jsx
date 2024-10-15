@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import UPSC from '../components/upsc';
+
 
 // Function to determine the grading color based on subject's difficulty
 const getGradingColor = (difficulty) => {
@@ -29,7 +31,7 @@ const HomePage = () => {
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col">
       {/* Header Section */}
-      <header className="bg-gray-800 text-white p-14 text-center">
+      <header className="bg-gray-800 text-white h-[500px] p-36 text-center">
         <h1 className="text-5xl font-bold">Welcome to UPSC Learning Platform</h1>
 
         {/* Search Bar */}
@@ -48,13 +50,13 @@ const HomePage = () => {
 
         {/* Buttons Section */}
         <div className="text-center my-5">
-          <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 mx-2">
+          <button className="bg-transparent border-blue-500 border-[2px] text-white py-2 px-4 rounded hover:bg-blue-600 mx-2">
             Master GS & CSAT
           </button>
-          <button className="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 mx-2">
+          <button className="bg-transparent border-red-500 border-[2px] text-white py-2 px-4 rounded hover:bg-red-600 mx-2">
             Go Premium
           </button>
-          <button className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 mx-2">
+          <button className="bg-transparent border-green-500 border-[2px] text-white py-2 px-4 rounded hover:bg-green-600 mx-2">
             Live Classes
           </button>
         </div>
@@ -101,9 +103,12 @@ const HomePage = () => {
       </main>
 
       {/* View All Section */}
-      <footer className="text-center my-5">
+      <div className="text-center my-5">
         <p className="text-xl text-gray-800 cursor-pointer hover:underline">View All</p>
-      </footer>
+      </div>
+
+      <UPSC/>
+      
     </div>
   );
 };
