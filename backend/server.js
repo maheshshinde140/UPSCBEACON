@@ -17,6 +17,8 @@ connectDB();
 
 const allowedOrigins = [
     'http://localhost:3000',
+    'https://upscbeacon.vercel.app/',
+    
   ];
   
   app.use(cors({
