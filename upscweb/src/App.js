@@ -12,8 +12,10 @@ import AdminLayout from './Admin/pages/AdminLayout';
 import Dashboard from './Admin/pages/Dashboard';
 import UploadPage from './Admin/pages/UploadPage';
 import PostPage from './Admin/pages/PostPage';
+import Syllabus from './pages/syllabus';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Exam from './pages/exam';
 
 const AppContent = () => {
   const isAuthenticated = !!localStorage.getItem('token');
@@ -24,6 +26,8 @@ const AppContent = () => {
       {location.pathname !== '/login' && <Navbar />}
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/syllabus" element={<Syllabus />} />
+        <Route path="/exams" element={<Exam />} />
         <Route path="/subjects/:subjectId" element={<SubjectPage />} />
         <Route path="/topics/:topicId" element={<TopicPage />} />
         <Route path="/login" element={<LoginPage />} />
