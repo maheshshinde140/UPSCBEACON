@@ -1,0 +1,20 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles.css or in your component file inside <style> tag */
+@keyframes blink {
+    0%, 100% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: purple; /* Change this to your desired color */
+    }
+  }
+  
+  .blinking-border {
+    border: 2px solid transparent; /* Base border width */
+    animation: blink 1s infinite; /* Adjust the duration as needed */
+  }
+  

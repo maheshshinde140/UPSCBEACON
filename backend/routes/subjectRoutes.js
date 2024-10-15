@@ -7,8 +7,8 @@ const router = express.Router();
 // Routes
 router.get('/get', getAllSubjects);
 router.get('/find/:id', getSubjectById);
-router.post('/create',protect, createSubject);
-router.put('/update/:id',protect, updateSubject);
-router.delete('/delete/:id',protect,admin, deleteSubject);
+router.post('/create', createSubject);
+router.put('/update/:id', updateSubject);
+router.delete('/delete/:id', deleteSubject);
 
 export default router;

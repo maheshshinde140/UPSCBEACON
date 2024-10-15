@@ -12,6 +12,7 @@ export const getAllSubjects = async (req, res) => {
 
 // Create new subject
 export const createSubject = async (req, res) => {
+  
   const { name, description } = req.body;
   try {
     const newSubject = new Subject({ name, description });
