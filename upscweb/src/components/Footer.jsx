@@ -100,7 +100,10 @@ const Footer = () => {
                         <p>Copyright © 2023 UPSCBEACON</p>
                         <p className='text-xs'>Privacy Policy | Refund And Cancellation Policy | FAQ | Terms & Conditions | Sitemap</p>
                     </div>
+                    <div className='mt-3'>
+                    <span className='text-xs'>Made by ❤️ <span className='text-xs font-bold hover:text-blue-500 cursor-pointer'>HarIT Solution</span></span>
                     </div>
+                     </div>
                 </div>
             </div>
         </footer>

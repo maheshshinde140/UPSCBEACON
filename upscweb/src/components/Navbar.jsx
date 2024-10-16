@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="lg:flex hidden items-center space-x-9">
           <Link to="/exams" className="mx-2 text-gray-700 hover:text-blue-500">Exams <i className="fas fa-caret-down"></i></Link>
           <Link to="/syllabus" className="mx-2 text-gray-700 hover:text-blue-500">Syllabus <i className="fas fa-caret-down"></i></Link>
-          <Link to="/subjects" className="mx-2 text-gray-700 hover:text-blue-500">Resources <i className="fas fa-caret-down"></i></Link>
+          <Link to="/resource" className="mx-2 text-gray-700 hover:text-blue-500">Resources <i className="fas fa-caret-down"></i></Link>
           <Link to="/contact" className="mx-2 text-gray-700 hover:text-blue-500">Contact</Link>
           <Link to="/about" className="mx-2 text-gray-700 hover:text-blue-500">About</Link>
         </div>
