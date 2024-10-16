@@ -7,6 +7,7 @@ import cookieParser from 'cookie-parser';
 import subjectRoutes from './routes/subjectRoutes.js';
 import topicRoutes from './routes/topicRoutes.js';
 import userRoutes from './routes/userRoutes.js';
+import currentAffairsRoutes from './routes/currentAffairs.routes.js';
 
 dotenv.config();
 
@@ -42,6 +43,9 @@ app.use(cookieParser());
 app.use('/api/subjects', subjectRoutes);
 app.use('/api/topics', topicRoutes);
 app.use('/api/users', userRoutes);
+// Use the current affairs routes
+app.use('/api/current-affairs', currentAffairsRoutes);
+
 
 const PORT = process.env.PORT || 5000;
 

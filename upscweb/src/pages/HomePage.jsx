@@ -30,7 +30,7 @@ const HomePage = () => {
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col">
       {/* Header Section */}
-      <header className="bg-gray-800 text-white h-[500px] p-8 md:p-36 text-center">
+      <header className="bg-gray-800 text-white p-8 md:p-36 text-center">
         <h1 className="text-3xl md:text-5xl font-bold">Welcome to UPSC Learning Platform</h1>
 
         {/* Search Bar */}

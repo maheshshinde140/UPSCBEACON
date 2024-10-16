@@ -16,6 +16,7 @@ import Syllabus from './pages/syllabus';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Exam from './pages/exam';
+import About from './pages/About';
 
 const AppContent = () => {
   const isAuthenticated = !!localStorage.getItem('token');
@@ -28,6 +29,7 @@ const AppContent = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/syllabus" element={<Syllabus />} />
         <Route path="/exams" element={<Exam />} />
+        <Route path="/about" element={<About />} />
         <Route path="/subjects/:subjectId" element={<SubjectPage />} />
         <Route path="/topics/:topicId" element={<TopicPage />} />
         <Route path="/login" element={<LoginPage />} />
