@@ -52,7 +52,7 @@ const Navbar = () => {
           <span className="mx-2 text-gray-700">Loading...</span>
         ) : (
           subjects.map((subject) => (
-            <div className="relative group flex-shrink-0" key={subject._id}>
+            <div className="relative group flex-shrink-0 " key={subject._id}>
               <Link 
                 key={subject._id}
                 to={`/subjects/${subject._id}`} 
