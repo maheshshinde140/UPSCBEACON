@@ -15,14 +15,12 @@ const SubjectPage = () => {
     }
   }, [subjectId, dispatch]);
 
-  // Update selectedTopic when topics are loaded
   useEffect(() => {
     if (topics.length > 0) {
       setSelectedTopic(topics[0]); // Automatically select the first topic
     }
   }, [topics]);
 
-  // Function to handle topic selection
   const handleTopicSelect = (topic) => {
     setSelectedTopic(topic);
   };
@@ -30,8 +28,7 @@ const SubjectPage = () => {
   return (
     <div className="flex min-h-screen bg-gray-50">
       <aside className="w-1/5 bg-white shadow-lg p-6">
-         {/* Displaying the subject name from the first topic */}
-         {topics.length > 0 && (
+        {topics.length > 0 && (
           <h2 className="font-bold text-xl mb-6">{topics[0].subject.name}</h2>
         )}
         <ul>
@@ -41,8 +38,8 @@ const SubjectPage = () => {
                 onClick={() => handleTopicSelect(topic)} // Handle topic selection
                 className={`block p-3 rounded-lg w-full text-left ${
                   selectedTopic && selectedTopic._id === topic._id
-                    ? 'block bg-sky-900  text-white' // Active topic style
-                    : 'text-gray-700 hover:bg-gray-200' // Inactive topic style
+                    ? 'block bg-sky-900 text-white'
+                    : 'text-gray-700 hover:bg-gray-200'
                 }`}
               >
                 {topic.title}
@@ -53,14 +50,14 @@ const SubjectPage = () => {
       </aside>
       <main className="w-3/4 p-10">
         <div className="flex justify-between items-start">
-          {/* Display selected topic content */}
           {selectedTopic ? (
             <div className="mt-10 max-w-3xl">
               <h2 className="text-3xl font-bold text-gray-600 mb-4">{selectedTopic.title}</h2>
-              <div
-                className="text-lg leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: selectedTopic.content }} // Render topic content
-              />
+              <div className="prose  text-lg leading-relaxed">
+                <div
+                  dangerouslySetInnerHTML={{ __html: selectedTopic.content }} // Render topic content
+                />
+              </div>
             </div>
           ) : (
             <div className="mt-10">
