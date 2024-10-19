@@ -3,7 +3,7 @@ import contact from '../components/contact.png';
 
 const Contact = () => {
     return (
-        <div className="p-4 justify-center items-center flex flex-col">
+        <div className="p-4 justify-center items-center flex fade-in flex-col">
             <section className="bg-gradient-to-r from-gray-500 space-y-4 w-full to-gray-800 justify-between space-x-20 flex flex-row items-end text-white p-6 rounded-md">
               <div className=' justify-center hidden lg:flex md:flex items-center'>
                 <img src={contact} alt="contact us" className='p-2 h-[400px]'/>
